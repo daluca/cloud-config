@@ -20,6 +20,13 @@ resource "hcloud_firewall" "default" {
     port       = tostring(22)
     source_ips = local.global
   }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = tostring(22022)
+    source_ips = local.global
+  }
 }
 
 resource "hcloud_firewall" "http" {
