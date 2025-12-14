@@ -2,3 +2,4 @@
 /.env
 /.terraform/
 /terraform.tfstate*
+/.pre-commit-config.yaml
