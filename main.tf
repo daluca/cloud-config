@@ -11,5 +11,14 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "~> 5"
     }
+
+    pocketid = {
+      source  = "trozz/pocketid"
+      version = "~> 0.1"
+    }
   }
+}
+
+provider "pocketid" {
+  base_url = "https://id.${var.primary_domain}"
 }
